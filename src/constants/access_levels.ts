@@ -13,7 +13,7 @@ export enum AccessLevel {
   ArchiveCollection = "archive_collection",
   DeleteCollection = "delete_collection",
 
-  // Storage
+  // Storage ( Warehouses )
   ViewStorage = "view_storage",
   AddStorage = "add_storage",
   EditStorage = "edit_storage",
