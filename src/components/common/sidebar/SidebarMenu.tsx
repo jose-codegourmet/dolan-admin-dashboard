@@ -4,6 +4,7 @@ import { MenuListModel } from "@/types/menu";
 import { usePathname } from "next/navigation";
 import { ComponentPropsWithRef, FC } from "react";
 import { twMerge } from "tailwind-merge";
+import SidebarMenuList from "./SidebarMenuList";
 
 export interface SidebarMenuProps extends ComponentPropsWithRef<"ul"> {
   menuObj: MenuListModel;
@@ -20,24 +21,12 @@ const SidebarMenu: FC<SidebarMenuProps> = (props) => {
           {menuObj.title}
         </div>
       )}
-      <ul role="list" id={`menu-${menuObj.id}`} className="-mx-2 space-y-1">
-        {menuObj.items.map((item, key) => (
-          <li key={`${key} ${item.title}`}>
-            <a
-              href={item.route}
-              className={twMerge(
-                currPathname.includes(item.route)
-                  ? "bg-gray-50 text-indigo-600"
-                  : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50",
-                "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-              )}
-            >
-              <span className="text-2xl">{item.icon}</span>
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+
+      <SidebarMenuList
+        currPathname={currPathname}
+        listId={menuObj.id}
+        items={menuObj.items}
+      />
     </>
   );
 };

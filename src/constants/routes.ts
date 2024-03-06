@@ -1,6 +1,6 @@
 export enum AppRoutes {
-  Collection = "/collection",
-  NewCollection = "/collection/new",
+  Collection = "/collections",
+  NewCollection = "/collections/new",
 
   Products = "/products",
   NewProduct = "/products/new",

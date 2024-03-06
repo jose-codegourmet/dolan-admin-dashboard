@@ -5,6 +5,7 @@ import {
   TbGardenCart,
   TbHome,
   TbReceipt,
+  TbReceiptOff,
   TbSettings,
   TbTableAlias,
   TbUserCog,
@@ -25,6 +26,13 @@ export const MAIN_MENU: MenuListModel = {
       title: "Orders",
       route: AppRoutes.Orders,
       icon: <TbReceipt />,
+      submenu: [
+        {
+          title: "Draft Orders",
+          route: AppRoutes.DraftOrders,
+          icon: <TbReceiptOff />,
+        },
+      ],
     },
     {
       title: "Products",
