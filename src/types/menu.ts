@@ -7,3 +7,10 @@ export interface MenuItemModel {
   isExternal?: boolean;
   submenu?: MenuItemModel[];
 }
+
+export interface MenuListModel {
+  id: string;
+  items: MenuItemModel[];
+  title: string;
+  icon?: ReactNode | string;
+}
