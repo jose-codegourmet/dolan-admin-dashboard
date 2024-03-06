@@ -25,7 +25,7 @@ export const MAIN_MENU = [
     title: "Products",
     route: AppRoutes.Products,
     icon: <TbGardenCart />,
-    submenus: [
+    submenu: [
       {
         title: "Collection",
         route: AppRoutes.Collection,

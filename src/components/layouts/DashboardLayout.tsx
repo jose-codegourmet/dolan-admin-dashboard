@@ -16,6 +16,7 @@ import {
 } from "react-icons/hi2";
 import { HiCode, HiDocumentReport } from "react-icons/hi";
 import { twMerge } from "tailwind-merge";
+import useScreenContext from "@/hooks/context/screen-context";
 
 const navigation = [
   {
@@ -47,10 +48,28 @@ const DashboardLayout: FC<DashboardLayoutProps> = ({
   children,
   isSidebarOpen,
 }) => {
+  const {
+    isXsScreen,
+    isSmScreen,
+    isMdScreen,
+    isLgScreen,
+    isXlScreen,
+    is2xlScreen,
+  } = useScreenContext();
   const [sidebarOpen, setSidebarOpen] = useState(isSidebarOpen ?? false);
 
   return (
-    <div className="w-ful min-h-screen bg-slate-100">
+    <div
+      className={twMerge(
+        "w-ful min-h-screen bg-slate-100",
+        is2xlScreen && "screen-true-at-2xl",
+        isXlScreen && "screen-true-at-xl",
+        isLgScreen && "screen-true-at-lg",
+        isMdScreen && "screen-true-at-md",
+        isSmScreen && "screen-true-at-sm",
+        isXsScreen && "screen-true-at-xs"
+      )}
+    >
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
