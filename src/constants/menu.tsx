@@ -4,10 +4,12 @@ import {
   TbBuildingWarehouse,
   TbGardenCart,
   TbHome,
+  TbLogout,
   TbReceipt,
   TbReceiptOff,
   TbSettings,
   TbTableAlias,
+  TbUser,
   TbUserCog,
   TbUserDollar,
   TbUsers,
@@ -84,6 +86,23 @@ export const SETTINGS_MENU: MenuListModel = {
       title: "Staff Types",
       route: AppRoutes.StaffTypes,
       icon: <TbUserCog />,
+    },
+  ],
+};
+
+export const PROFILE_DD_MENU: MenuListModel = {
+  id: "profile",
+  title: "Profile",
+  items: [
+    {
+      title: "My Account",
+      route: AppRoutes.MyAccount,
+      icon: <TbUser />,
+    },
+    {
+      title: "Logout",
+      route: AppRoutes.Login,
+      icon: <TbLogout />,
     },
   ],
 };
