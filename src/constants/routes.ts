@@ -5,6 +5,9 @@ export enum AppRoutes {
   Products = "/products",
   NewProduct = "/products/new",
 
+  Branch = "/branch",
+  NewBranch = "/branch/new",
+
   Storage = "/storage",
   NewStorage = "/storage/new",
 

@@ -1,3 +1,4 @@
+// do not use~!
 export enum AccessLevel {
   // Products
   ViewProduct = "view_product",
