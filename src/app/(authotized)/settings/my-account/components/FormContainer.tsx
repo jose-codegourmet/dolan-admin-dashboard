@@ -15,7 +15,6 @@ const FormContainer = () => {
         last_name: activeUser.last_name ?? "",
         gender: activeUser.gender ?? "",
         email: activeUser.email ?? "",
-        username: activeUser.username ?? "",
         avatar: activeUser.avatar?.src ?? "",
       }}
     />

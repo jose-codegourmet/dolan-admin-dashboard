@@ -8,7 +8,6 @@ export interface UserModel {
   gender: string;
   age: number;
 
-  username: string;
   email: string;
   organization: string;
   role: string;

@@ -2,34 +2,17 @@
 
 import { ComponentPropsWithoutRef, FC } from "react";
 import { twMerge } from "tailwind-merge";
-import {
-  useForm,
-  Controller,
-  SubmitHandler,
-  Form,
-  FormSubmitHandler,
-  FormProvider,
-} from "react-hook-form";
+import { useForm, SubmitHandler, FormProvider } from "react-hook-form";
 import TextField from "../../fields/Textfield";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { useRouter } from "next/navigation";
 
-const schema = yup
-  .object({
-    email: yup.string().required(),
-    password: yup.string().required(),
-  })
-  .required();
+import { useRouter } from "next/navigation";
+import { Inputs, schema } from "./formConfig";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 export interface LoginFormProps extends ComponentPropsWithoutRef<"form"> {
   successUrl: string;
 }
 
-type Inputs = {
-  email: string;
-  password: string;
-};
 
 const LoginForm: FC<LoginFormProps> = ({ className, successUrl }) => {
   const router = useRouter();

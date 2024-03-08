@@ -20,7 +20,6 @@ const MyProfileForm: FC<MyProfileFormProps> = (props) => {
   const router = useRouter();
   const methods = useForm<Inputs>({
     defaultValues: {
-      username: "",
       first_name: "",
       last_name: "",
       gender: "",
@@ -92,11 +91,6 @@ const MyProfileForm: FC<MyProfileFormProps> = (props) => {
                       application.
                     </p>
                   </div>
-                  <TextField
-                    name="username"
-                    label="Username"
-                    placeholder="Enter username"
-                  />
                   <TextField
                     name="email"
                     label="Email"

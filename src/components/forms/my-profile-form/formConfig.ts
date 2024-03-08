@@ -2,7 +2,6 @@ import * as yup from "yup";
 
 export const schema = yup
   .object({
-    username: yup.string().required(),
     first_name: yup.string().required(),
     last_name: yup.string().required(),
     gender: yup.string().required(),
@@ -12,7 +11,6 @@ export const schema = yup
   .required();
 
 export type Inputs = {
-  username: string;
   first_name: string;
   last_name: string;
   gender: string;
