@@ -1,5 +1,7 @@
+import FormContainer from "./components/FormContainer";
+
 const MyAccountPage = () => {
-  return <div>MyAccountPage</div>;
+  return <FormContainer />;
 };
 
 export default MyAccountPage;

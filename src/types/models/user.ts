@@ -4,8 +4,11 @@ import { ImageModel } from "./image";
 export interface UserModel {
   id: string;
   first_name: string;
-  gender: string;
   last_name: string;
+  gender: string;
+  age: number;
+
+  username: string;
   email: string;
   organization: string;
   role: string;
@@ -13,6 +16,8 @@ export interface UserModel {
 
   avatar?: ImageModel;
 
+  employed_date: Date;
+  birth_date: Date;
   created_date: Date;
   updated_date: Date;
   last_login_date: Date;

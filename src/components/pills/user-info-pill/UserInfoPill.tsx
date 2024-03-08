@@ -1,6 +1,7 @@
 import { UserModel } from "@/types/models/user";
 import { ComponentPropsWithRef, FC } from "react";
 import Image from "next/image";
+import { DEFAULT_AVATAR_SRC } from "@/constants/defaults";
 
 export type UserInfoPillProps = ComponentPropsWithRef<"div"> & UserModel;
 
@@ -10,9 +11,7 @@ const UserInfoPill: FC<UserInfoPillProps> = ({
   organization,
   avatar,
 }) => {
-  const avatarSrc =
-    avatar?.src ??
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80";
+  const avatarSrc = avatar?.src ?? DEFAULT_AVATAR_SRC;
 
   const avatarAlt = avatar?.alt ?? `${first_name} ${last_name} avatar`;
   return (
