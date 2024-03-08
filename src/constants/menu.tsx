@@ -100,6 +100,11 @@ export const PROFILE_DD_MENU: MenuListModel = {
       icon: <TbUser />,
     },
     {
+      title: "Branch",
+      route: AppRoutes.Branch,
+      icon: <TbUser />,
+    },
+    {
       title: "Logout",
       route: AppRoutes.Login,
       icon: <TbLogout />,
