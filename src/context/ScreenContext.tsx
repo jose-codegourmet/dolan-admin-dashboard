@@ -30,19 +30,20 @@ export default function ScreenProvider({ children }: { children: ReactNode }) {
   );
   const is2xlScreen = useMediaQuery(`(min-width: 1536px)`);
 
-  const providerValue = {
-    isXsScreen,
-    isSmScreen,
-    isMdScreen,
-    isLgScreen,
-    isXlScreen,
-    is2xlScreen,
-    isMobile: isXsScreen || isSmScreen,
-    isTablet: isMdScreen || isLgScreen,
-    isDesktop: isXlScreen || is2xlScreen,
-  };
   return (
-    <ScreenContext.Provider value={providerValue}>
+    <ScreenContext.Provider
+      value={{
+        isXsScreen,
+        isSmScreen,
+        isMdScreen,
+        isLgScreen,
+        isXlScreen,
+        is2xlScreen,
+        isMobile: isXsScreen || isSmScreen,
+        isTablet: isMdScreen || isLgScreen,
+        isDesktop: isXlScreen || is2xlScreen,
+      }}
+    >
       {children}
     </ScreenContext.Provider>
   );

@@ -2,6 +2,7 @@
 
 import DashboardLayout from "@/components/layouts/DashboardLayout";
 import ScreenProvider from "@/context/ScreenContext";
+import UserSessionProvider from "@/context/UserSessionContext";
 import { FC } from "react";
 
 interface Props {
@@ -9,9 +10,11 @@ interface Props {
 }
 const AuthorizedLayout: FC<Props> = ({ children }) => {
   return (
-    <ScreenProvider>
-      <DashboardLayout>{children}</DashboardLayout>
-    </ScreenProvider>
+    <UserSessionProvider>
+      <ScreenProvider>
+        <DashboardLayout>{children}</DashboardLayout>
+      </ScreenProvider>
+    </UserSessionProvider>
   );
 };
 
