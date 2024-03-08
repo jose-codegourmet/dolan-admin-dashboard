@@ -3,6 +3,7 @@ import { Component, ComponentPropsWithRef, FC, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import SidebarMenuList from "./SidebarMenuList";
 import { TbArrowForward } from "react-icons/tb";
+import Link from "next/link";
 
 interface SidebarMenuItemProps extends ComponentPropsWithRef<"li"> {
   currPathname: string;
@@ -23,7 +24,7 @@ const SidebarMenuItem: FC<SidebarMenuItemProps> = ({
     isActive || item.submenu?.some((i) => currPathname.includes(i.route));
   return (
     <li className={twMerge(className)}>
-      <a
+      <Link
         href={item.route}
         className={twMerge(
           isActive
@@ -44,7 +45,7 @@ const SidebarMenuItem: FC<SidebarMenuItemProps> = ({
         )}
         <span className="text-2xl">{item.icon}</span>
         {item.title}
-      </a>
+      </Link>
       {item.submenu && (
         <div
           className={twMerge(

@@ -7,6 +7,7 @@ export type UserInfoPillProps = ComponentPropsWithRef<"div"> & UserModel;
 const UserInfoPill: FC<UserInfoPillProps> = ({
   first_name,
   last_name,
+  organization,
   avatar,
 }) => {
   const avatarSrc =
@@ -23,12 +24,15 @@ const UserInfoPill: FC<UserInfoPillProps> = ({
         width={32}
         height={32}
       />
-      <span className="hidden lg:flex lg:items-center">
+      <span className="ml-4 flex flex-col space-y-1 items-start justify-start">
         <span
-          className="ml-4 text-sm font-semibold leading-6 text-gray-900"
+          className="leading-none text-sm font-semibold  text-gray-900"
           aria-hidden="true"
         >
           {first_name} {last_name}
+        </span>
+        <span className="text-xs text-primary font-semibold leading-none">
+          {organization}
         </span>
       </span>
     </div>
