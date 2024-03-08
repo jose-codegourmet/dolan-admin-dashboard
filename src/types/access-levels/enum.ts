@@ -1,5 +1,12 @@
 // do not use~!
 export enum AccessLevel {
+  // Organization
+  ViewOrganization = "view_organization",
+  AddOrganization = "add_organization",
+  EditOrganization = "edit_organization",
+  ArchiveOrganization = "archive_organization",
+  DeleteOrganization = "delete_organization",
+
   // Products
   ViewProduct = "view_product",
   AddProduct = "add_product",
@@ -13,6 +20,13 @@ export enum AccessLevel {
   EditCollection = "edit_collection",
   ArchiveCollection = "archive_collection",
   DeleteCollection = "delete_collection",
+
+  // Branch ( Warehouses )
+  ViewBranch = "view_branch",
+  AddBranch = "add_branch",
+  EditBranch = "edit_branch",
+  ArchiveBranch = "archive_branch",
+  DeleteBranch = "delete_branch",
 
   // Storage ( Warehouses )
   ViewStorage = "view_storage",
@@ -57,4 +71,7 @@ export enum AccessLevel {
 
   // Reports
   ViewReports = "view_reports",
+
+  // Notifications
+  ViewNotifications = "view_notifications",
 }
