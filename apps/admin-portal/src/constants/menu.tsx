@@ -1,17 +1,11 @@
 import { MenuListModel } from "@repo/shared-types";
 import { AppRoutes } from "./routes";
 import {
-  TbBuildingWarehouse,
-  TbGardenCart,
   TbHome,
   TbLogout,
-  TbReceipt,
-  TbReceiptOff,
+  TbPigMoney,
   TbSettings,
-  TbTableAlias,
   TbUser,
-  TbUserCog,
-  TbUserDollar,
   TbUsers,
 } from "react-icons/tb";
 
@@ -25,38 +19,14 @@ export const MAIN_MENU: MenuListModel = {
       icon: <TbHome />,
     },
     {
-      title: "Orders",
-      route: AppRoutes.Orders,
-      icon: <TbReceipt />,
-      submenu: [
-        {
-          title: "Draft Orders",
-          route: AppRoutes.DraftOrders,
-          icon: <TbReceiptOff />,
-        },
-      ],
+      title: "Clients",
+      route: AppRoutes.Clients,
+      icon: <TbUsers />,
     },
     {
-      title: "Products",
-      route: AppRoutes.Products,
-      icon: <TbGardenCart />,
-      submenu: [
-        {
-          title: "Collection",
-          route: AppRoutes.Collection,
-          icon: <TbTableAlias />,
-        },
-        {
-          title: "Storage",
-          route: AppRoutes.Storage,
-          icon: <TbBuildingWarehouse />,
-        },
-      ],
-    },
-    {
-      title: "Customers",
-      route: AppRoutes.Customers,
-      icon: <TbUserDollar />,
+      title: "Reports & Billings",
+      route: AppRoutes.Reports,
+      icon: <TbPigMoney />,
     },
   ],
 };
@@ -73,23 +43,6 @@ export const MAIN_MENU_FOOTER: MenuListModel = {
   ],
 };
 
-export const SETTINGS_MENU: MenuListModel = {
-  id: "settings",
-  title: "Settings",
-  items: [
-    {
-      title: "Staff",
-      route: AppRoutes.Staff,
-      icon: <TbUsers />,
-    },
-    {
-      title: "Staff Types",
-      route: AppRoutes.StaffTypes,
-      icon: <TbUserCog />,
-    },
-  ],
-};
-
 export const PROFILE_DD_MENU: MenuListModel = {
   id: "profile",
   title: "Profile",
@@ -97,11 +50,6 @@ export const PROFILE_DD_MENU: MenuListModel = {
     {
       title: "My Account",
       route: AppRoutes.MyAccount,
-      icon: <TbUser />,
-    },
-    {
-      title: "Branch",
-      route: AppRoutes.Branch,
       icon: <TbUser />,
     },
     {

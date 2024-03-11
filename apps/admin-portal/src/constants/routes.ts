@@ -1,33 +1,11 @@
 export enum AppRoutes {
-  Collection = "/collections",
-  NewCollection = "/collections/new",
+  Clients = "/clients",
+  NewClient = "/clients/new",
 
-  Products = "/products",
-  NewProduct = "/products/new",
-
-  Branch = "/branch",
-  NewBranch = "/branch/new",
-
-  Storage = "/storage",
-  NewStorage = "/storage/new",
-
-  Customers = "/customers",
-  NewCustomer = "/customers/new",
-
-  Orders = "/orders",
-  NewOrder = "/orders/new",
-
-  DraftOrders = "/draft-orders",
-  NewDraftOrder = "/draft-orders/new",
-
-  Notifications = "/notifications",
   Reports = "/reports",
+  Notifications = "/notifications",
 
   Settings = "/settings",
-  Staff = "/settings/staff",
-  NewStaff = "/settings/staff/new",
-  StaffTypes = "/settings/staff-types",
-  NewStaffType = "/settings/staff-types/new",
   MyAccount = "/settings/my-account",
 
   Dashboard = "/dashboard",
