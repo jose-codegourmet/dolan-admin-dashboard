@@ -1,0 +1,34 @@
+{
+  "folders": [
+    {
+      "name": "🔧 Admin Portal ",
+      "path": "../apps/admin-portal",
+    },
+    {
+      "name": "🎃 Customer Portal ",
+      "path": "../apps/customer-portal",
+    },
+    {
+      "name": "🔫 Shared Components ",
+      "path": "../packages/ui",
+    },
+    {
+      "name": "🕯️ Shared Types ",
+      "path": "../packages/shared-types",
+    },
+    {
+      "name": "🌳 ROOT",
+      "path": "../",
+    },
+  ],
+  "settings": {
+    "editor.rulers": [120, 180],
+    "editor.stickyScroll.enabled": true,
+    "[javascript][typescript][typescriptreact][scss][jsonc]": {
+      "editor.tabSize": 4,
+      "editor.formatOnSave": true,
+      "editor.formatOnSaveMode": "file",
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+  },
+}
